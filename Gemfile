@@ -6,6 +6,9 @@ gem 'rails', '3.0.4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
+gem 'ZenTest'
+gem 'autotest-rails-pure'
+gem 'growl', '1.0.3'
 
 group :development do
 	gem 'rspec-rails', '2.5.0'
