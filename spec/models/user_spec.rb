@@ -116,7 +116,7 @@ describe User do
           
           it "should have a salt" do
                 @user.should respond_to(:salt)
-              end
+          end
         
         
         describe "has_password? method" do
@@ -145,4 +145,4 @@ describe User do
      end
    end
  end
-end
+
