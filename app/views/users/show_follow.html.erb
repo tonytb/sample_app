@@ -11,14 +11,17 @@
 				<% end %>
 		</td>
 		<td class="sidebar round">
-			<strong>Name</strong> <%= @user.name %><br />
-			<strong>URL</strong> <%= link_to user_path(@user), @user %><br />
-			<strong>Microposts</stong> <%= @user.microposts.count %>
-			<%= render 'shared/stats' %>
+			
 			<% unless @users.empty? %>
 				<% @users.each do |user| %>
-					<%= link_to gravatar_for(user, :size => 30), user %>
+					
 				<% end %>
+			<% end %>
+			
+			<% if current_user.following?(@user) %>
+				<%= render 'unfollow' %>
+			<% else %>
+				<%= render 'follow' %>
 			<% end %>
 		</td>
 	</tr>

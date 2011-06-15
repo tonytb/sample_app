@@ -1,10 +1,36 @@
-<table class="profile" summary="Profile information">
+
+<% unless @user.microposts.empty? %>
+
+<div class="status info">
+   	<p class="closestatus"><a href="" title="Close">x</a></p>
+   	<p><%= image_tag("cp/icons/icon_info.png") %><span>Information:</span> You have currently posted <%= pluralize(@user.microposts.count, "micropost") %>.</p>
+   </div>
+<% end %>
+
+<div class="contentcontainer med left">
+      	<div class="headings altheading">
+          <h2>Send a message to your tenants</h2>
+      	</div>
+      <div class="contentbox">
+		<%= render 'shared/micropost_form' %>
+	  </div>
+</div>
+
+<div class="contentcontainer med left">
+      	<div class="headings altheading">
+          <h2>Current Messages</h2>
+      	</div>
+      <div class="contentbox">
+		<%= render 'shared/feed' %>
+	  </div>
+</div>
+
+<%= render 'follow_form' if signed_in? %>
+
+<!-- <table class="profile" summary="Profile information">
 <tr>
 	<td class="main">
-		<h1>
-			<%= gravatar_for @user %>
-			<%= @user.name %>
-		</h1>
+		
 		<%= render 'follow_form' if signed_in? %>
 	
 	
@@ -15,12 +41,6 @@
 	<%= will_paginate @microposts %>
 	<% end %>
 	</td>
-	<td class="sidebar round">
-		<strong>Name: </strong><%= @user.name %><br />
-		<strong>URL: </strong><%= link_to user_path(@user), @user %><br />
-		<strong>Microposts: </strong> <%= @user.microposts.count %>
-		<%= render 'shared/stats' %>
-	</td>
+	
 </tr>
-</table>
-		
+</table> -->

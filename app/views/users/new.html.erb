@@ -1,29 +1,52 @@
-<h1>Sign up</h1>
 
+<div id="page">
+  <div class="wrapper">
+    <div class="container">
+<div id="content-zone" class="prepend-6 span-12 append-6 last">
+<h2>Sign Up</h2>
+
+<div class="outer"><div class="inner"><div class="sub">
+
+<!--
+<fieldset>
+<legend>Please log in below</legend>
+-->
 <%= form_for(@user) do |f| %>
 	<%= render 'shared/error_messages', :object => f.object %>
-	
-	<div class="field">
-		<%= f.label :name %><br />
-		<%= f.text_field :name %>
-	</div>
-	
-	<div class="field">
-		<%= f.label :email %><br />
-		<%= f.text_field :email %>
-	</div>
-	
-	<div class="field">
-		<%= f.label :password %><br />
-		<%= f.password_field :password %>
-	</div>
-	
-	<div class="field">
-		<%= f.label :password_confirmation, "Confirmation" %><br />
-		<%= f.password_field :password_confirmation %>
-	</div>
-	
-	<div class="actions">
-		<%= f.submit "Sign up" %>
-	</div>
-<% end %>		
+<div class="field">
+<%= f.label :name, "Full name:" %>
+<%= f.text_field :name %>
+</div>
+
+<div class="field">
+<%= f.label :email, "Email Address:" %>
+<%= f.text_field :email %>
+</div>
+
+<div class="field">
+<%= f.label :password, "Password:" %>
+<%= f.password_field :password%>
+</div>
+
+<div class="field">
+<%= f.label :password_confirmation, "Confirm Password:" %>
+<%= f.password_field :password_confirmation %>
+</div>
+
+<!--
+</fieldset>
+-->
+
+
+<center><div class="actions"><%= f.submit "Sign up" %></div></center>
+<% end %>
+</form>
+<br />
+<hr/>
+<p class="acenter note">We will not give out your info to anyone.</p>
+</div></div></div>
+</div>
+      
+    </div>
+  </div>
+</div>	

@@ -1,12 +1,5 @@
-<!-- [if lt IE 9]>
-<script src="html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<%= stylesheet_link_tag 'grid', :type => 'text/css', :media => 'all' %>
+<%= stylesheet_link_tag 'print', :type => 'text/css', :media => 'all' %>
+<%= stylesheet_link_tag 'screen', :type => 'text/css', :media => 'all' %>
+<%= stylesheet_link_tag 'style.css', :id => 'defaultStyle', :type => 'text/css',  :media => 'all' %>
 
-<%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-<%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
-
-<!--[if lt IE 8]>
-<%= stylesheet_link_tag 'blueprint/ie' %>
-<![endif]-->
-
-<%= stylesheet_link_tag 'custom', :media => 'screen' %>

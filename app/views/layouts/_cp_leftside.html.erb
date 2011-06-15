@@ -1,0 +1,69 @@
+<div id="leftside">
+	<div class="user">
+    	<%= gravatar_for @user %>
+		<br />
+        <p>Logged in as:</p>
+        <p class="username"><%= @user.name %></p>
+		<!-- <p>URL: <%= link_to user_path(@user), @user %></p> -->
+		<br />
+		<p class="userbtn"><%= link_to "Sign out", signout_path, :method => :delete %></p>
+        <p class="userbtn"><%= link_to "Settings", edit_user_path(current_user) %></p>
+        
+		<p class="userbtn"><%= link_to "Home", current_user %></p>
+    </div>
+
+	<div class="notifications">
+		<% @user ||= current_user %>
+		<table>
+			<tr>
+			<td>
+				<p><a href="<%= following_user_path(@user) %>" title="" class="notifypop">Tracking:</a></p>
+		  
+		<p class="notifycount"><a href="<%= following_user_path(@user) %>" title="" class="notifypop"><%= @user.following.count %></a></p>
+				<p>Tenants</p>
+			</td>
+			<td></td>
+		
+		<td><p><a href="<%= followers_user_path(@user) %>" title="" class="notifypop">Tracked by:</a></p>
+		  
+		<p class="notifycount"><a href="<%= followers_user_path(@user) %>" title="" class="notifypop"><%= @user.followers.count %></a></p>
+				<p>Tenants</p>
+		</td>
+		</tr>
+		</table>
+		
+	    </div>
+    
+    <ul id="nav">
+    	<li>
+				<a class="collapsed heading">Manage Properties</a>
+				<ul class="navigation">
+				<li><%= link_to 'All Properties', '#' %></li>
+                <li><%= link_to 'New Property', '#' %></li>
+                <li><a href="#" title="">Section link here</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="collapsed heading">Manage Tenants</a>
+             <ul class="navigation">
+                <li><%= link_to 'All Tenants', '#' %></li>
+                <li><%= link_to 'New Tenant', '#' %></li>
+                <li><a href="#" title="">Invite tenant</a></li>
+            </ul>
+        </li>
+        <li><a class="expanded heading">Manage Payments</a>
+            <ul class="navigation">
+                <li><a href="#" title="" class="likelogin">Section link here</a></li>
+                <li><a href="#" title="">Section link here</a></li>
+                <li><a href="#" title="">Section link here</a></li>
+            </ul>
+        </li>
+        <li><a class="expanded heading">Coming Soon...</a>
+            <ul class="navigation">
+                <li><a href="#" title="" class="likelogin">Section link here</a></li>
+                <li><a href="#" title="">Section link here</a></li>
+                <li><a href="#" title="">Section link here</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>

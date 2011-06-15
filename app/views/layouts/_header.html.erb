@@ -1,20 +1,27 @@
-<header>
-	<%= link_to logo, root_path %>
-	
-	<nav class="round">
-		<ul>
-			<li><%= link_to "Home", root_path %></li>
-			<% if signed_in? %>
-			<li><%= link_to "Users", users_path %></li>
-			<li><%= link_to "Profile", current_user %></li>
-			<li><%= link_to "Settings", edit_user_path(current_user) %></li>
-			<% end %>
-			<li><%= link_to "Help", help_path %></li>
-			<% if signed_in? %>
-			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
-			<% else %>
-			<li><%= link_to "Sign in", signin_path %></li>
-			<% end %>
-		</ul>
-	</nav>
-</header>
+<!-- ******************************* SITE HEADER ************************** -->
+
+<body id="home">
+		<div class="header">
+			<div class="container">
+				<h1><%= link_to "the rent book", root_path %></h1>
+				<div id="login">
+						<% if signed_in? %>
+							<%= link_to "Sign out", signout_path, :method => :delete %>
+						<% else %>
+							<%= link_to "Sign Up", signup_path  %> | <%= link_to "Log In", signin_path %></div>
+					   <% end %>
+					
+				
+				<div id="nav">
+					<ul>
+						<li class="first current"><%= link_to "Home", root_path %></li>
+						<li><%= link_to "Tour", '#' %></li>
+						<li><%= link_to "About us", about_path %></li>
+						<li><%= link_to "Contact us", contact_path %></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+<!-- ******************************* END OF SITE HEADER ************************** -->
+

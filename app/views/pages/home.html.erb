@@ -16,9 +16,173 @@
 </table>
 
 <% else %>
-<h1>Sample App Home</h1>
-<p>
-This is the home page page for my rails sample app.
-</p>
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<!-- ******************************* START OF CONTENT ************************** -->
+<div id="page">
+	<div class="wrapper">
+		<div class="container">
+			<div class="span-12 col1">
+				<div id="tagline">
+					<h2>Renting made easy.</h2>
+					<p>Landlords &amp; letting agents, track, monitor &amp; interact with your rental portfolio.</p>
+				</div>
+				
+				<!-- ******************************* START OF TAB HEADERS ************************** -->
+				<div id="tabs">
+					<ul>
+						<li><a href="#tabs-1"><span>landlords</span></a></li>
+						<li><a href="#tabs-2"><span>tenants</span></a></li>
+						<li><a href="#tabs-3"><span>commerical</span></a></li>
+						<li class="green-tab"><a href="#tabs-4"><span>try it for free<span></a></li>
+					</ul>
+					
+				<!-- ******************************* END OF TAB HEADERS ************************** -->
+					
+					<!-- ******************************* START OF TAB 1 ************************** -->
+					
+					<div id="tabs-1" class="features-block content">
+						<ul class="feature-list">
+							<li><%= image_tag("41_48x48.png") %>
+								<h4>Scalable Architecture</h4>
+								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+							</li>
+							
+							<li class="last"><%= image_tag("02_48x48.png") %>
+								<h4>Expense Tracking</h4>
+								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+							</li>
+							
+							<li><%= image_tag("25_48x48.png") %>
+								<h4>Skinnable Interface</h4>
+								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+							</li>
+							
+							<li class="last"><%= image_tag("55_48x48.png") %>
+								<h4>Real-Time Statistics</h4>
+								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+							</li>
+							
+							<li><%= image_tag("53_48x48.png") %>
+								<h4>Address Book</h4>
+								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+							</li>
+							
+							<li class="last"><%= image_tag("18_48x48.png") %>
+								<h4>Custom Widgets</h4>
+								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+							</li>
+						</ul>
+					</div>
+					
+					<!-- ******************************* END OF TAB 1 ************************** -->
+					
+					<!-- ******************************* START OF TAB 2 ************************** -->
+
+					<div id="tabs-2" class="content">
+						<ul class="feature-list clearfix">
+							<li><%= image_tag("16_48x48.png") %>
+								<h4>Value Plan</h4>
+								<p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.<br />
+									<%= link_to "learn more...", '#', :title => "Value Plan" %>
+								</p>
+							</li>
+							
+							<li class="last"><%= image_tag("04_48x48.png") %>
+								<h4>Medium Plan</h4>
+								<p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.<br />
+									<%= link_to "learn more...", '#' %>
+								</p>
+							</li>
+							
+							<li><%= image_tag("23_48x48.png") %>
+								<h4>Premium Plan</h4>
+								<p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.<br />
+									<%= link_to "learn more...", '#' %>
+								</p>
+							</li>
+						</ul>
+					</div>
+					
+					<!-- ******************************* END OF TAB 2 ************************** -->
+					
+					<!-- ******************************* START OF TAB 3 ************************** -->
+
+					<div id="tabs-3" class="content">
+						<ul class="feature-list clearfix">
+							<li class="no-icon">
+								<h4><%= link_to "Support Wiki", '#' %></h4>
+								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+							</li>
+							<li class="no-icon">
+								<h4><%= link_to "Community Forums", '#' %></h4>
+								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+							</li>
+							<li class="no-icon">
+								<h4><%= link_to "Customer Support", '#' %></h4>
+								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+								<ul>
+									<li>Donec nec justo sit amet orci.</li>
+									<li>Donec nec justo sit amet orci.</li>
+								</ul>
+								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+							</li>
+						</ul>
+					</div>
+					
+					<!-- ******************************* END OF TAB 3 ************************** -->
+					
+					<!-- ******************************* START TAB 4 ************************** -->
+
+					<div id="tabs-4" class="content">
+						<h4>Download now</h4>
+						<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+							<ul>
+								<li>Donec nec justo eget felis facilisis fermentum sit amet orci.</li>
+								<li>Donec nec justo eget.</li>
+							</ul>
+						<p>Donec nec justo eget felis facilisis fermentum sit amet orci.
+						<br />
+						<%= link_to "Download latest version", '#' %>
+						</p>
+					</div>
+					
+					<!-- ******************************* END OF TAB 4 ************************** -->
+					
+				</div>
+			</div>
+			
+			
+			<!-- ******************************* START OF SLIDER ************************** -->
+
+			<div class="span-12 col2 last">
+				<div id="slide-wrapper">
+					<div class="inner">
+						<div id="slide"><%= image_tag("../images/pl_screen1.jpg") %><%= image_tag("../images/pl_screen2.jpg") %><%= image_tag("../images/pl_screen3.jpg") %>
+						</div>
+					</div>
+				</div>
+			
+			
+			<!-- ******************************* END OF SLIDER ************************** -->
+			
+			<center><div id="cta" class="clearfix button-row"><span><%= link_to "take the tour", '#' %> <%= link_to "sign up for free", signup_path %></span></div></center>
+
+			
+			<!-- ******************************* START OF TESTIMONIALS ************************** -->
+			
+				<div id="testimonials">
+					<div class="testimonial">
+						<div class="inner">
+							<cite>This is starting to come together!</cite>
+						</div>
+							<h6>Joe Doe, Lorem Labs</h6>
+					</div>
+				</div>
+				
+				<!-- ******************************* END OF TESTIMONIALS ************************** -->
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 <% end %>

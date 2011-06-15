@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => :destroy
   
+  layout :cp_layout
+  
   def following
     @title = "Following"
     @user = User.find(params[:id])
@@ -25,6 +27,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(:page => params[:page])
+    @micropost = current_user.microposts.build(params[:micropost])
+    @feed_items = current_user.feed.paginate(:page => params[:page] || 1, :per_page => 3)
     @title = @user.name
   end
   
@@ -78,6 +82,11 @@ class UsersController < ApplicationController
     redirect_to(root_path) unless current_user.admin?
   end
   
-  
-  
+  def cp_layout
+    if signed_in?
+      "cp"
+    else
+      "application"
+    end
+  end
 end
