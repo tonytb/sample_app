@@ -2,7 +2,7 @@ module ApplicationHelper
 
 	# Return a title on a per-page basis.							#Documentation Comment
 	def title														#Method definition
-		base_title = "The Rent Book"			#Variable assignment
+		base_title = "Sales-Promotions.com - Reseller Management"			#Variable assignment
 		if @title.nil?												#Boolean test for nil
 			base_title												#Implicit return
 		else														

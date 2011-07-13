@@ -1,0 +1,53 @@
+<!-- Alternative Content Box Start -->
+    <div class="contentcontainer">
+       <div class="headings altheading">
+           <h2>Rewards Catalog</h2>
+       </div>
+       <div class="contentbox">
+       	<table width="100%">
+           	<thead>
+               	<tr>
+                   	   <th>Reward</th>
+                       <th></th>
+					   <th>Description</th>
+					   <th>Points</th>
+					   <th><th>
+					   <th></th>
+                       
+					   
+                   </tr>
+               </thead>
+               <tbody>
+						
+					<% @rewards.each do |reward| %>
+               	<tr>
+                   	    <td><%= image_tag(reward.image_url) %></td>
+						<td><%= reward.title %></td>
+                        <td><%= reward.description %></td>
+					    <td><%= reward.points %></td>
+					   
+                       
+                       
+                   </tr>
+					<% end %>
+					
+                   
+                   
+                    
+               </tbody>
+           </table>
+           <!-- <div class="extrabottom">
+           	<ul>
+				<li><%= image_tag("cp/icons/icon_approve.png") %> Show</li>
+               	<li><%= image_tag("cp/icons/icon_edit.png") %> Edit</li>
+                <li><%= image_tag("cp/icons/icon_delete.png") %> Remove</li>
+               </ul>
+           </div>-->
+       </div>
+   </div>
+  <!-- Alternative Content Box End -->
+
+
+<!-- <%= link_to 'New Product', new_product_path %> -->
+
+

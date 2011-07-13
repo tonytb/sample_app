@@ -1,0 +1,26 @@
+<%= form_for(@invitation) do |f| %>
+  <% if @invitation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@invitation.errors.count, "error") %> prohibited this invitation from being sent:</h2>
+
+      <ul>
+      <% @invitation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :receipient_email, "Reseller's email address" %><br />
+    <%= f.text_field :receipient_email %>
+  </div>
+  <div class="field">
+    <%= f.label :property, "Territory"%><br />
+    <%= f.text_field :property %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Send invite"%>
+  </div>
+<% end %>

@@ -10,7 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110414191613) do
+ActiveRecord::Schema.define(:version => 20110713115547) do
+
+  create_table "accounts", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "invitations", :force => true do |t|
+    t.integer  "sender_id"
+    t.string   "receipient_email"
+    t.string   "property"
+    t.string   "token"
+    t.datetime "sent_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -20,6 +35,17 @@ ActiveRecord::Schema.define(:version => 20110414191613) do
   end
 
   add_index "microposts", ["user_id"], :name => "index_microposts_on_user_id"
+
+  create_table "products", :force => true do |t|
+    t.string   "product_name"
+    t.string   "model"
+    t.string   "description"
+    t.string   "software"
+    t.string   "product_literature"
+    t.decimal  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
@@ -31,6 +57,23 @@ ActiveRecord::Schema.define(:version => 20110414191613) do
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
 
+  create_table "reports", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+# Could not dump table "resellers" because of following StandardError
+#   Unknown type 'srting' for column 'email'
+
+  create_table "rewards", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image_url"
+    t.string   "points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -39,6 +82,8 @@ ActiveRecord::Schema.define(:version => 20110414191613) do
     t.string   "encrypted_password"
     t.string   "salt"
     t.boolean  "admin",              :default => false
+    t.integer  "invitation_id"
+    t.integer  "invitation_limit"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @reseller.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @reseller.last_name %>
+</p>
+
+<p>
+  <b>Company name:</b>
+  <%= @reseller.company_name %>
+</p>
+
+<p>
+  <b>Terriorty:</b>
+  <%= @reseller.terriorty %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @reseller.address %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @reseller.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_reseller_path(@reseller) %> |
+<%= link_to 'Back', resellers_path %>

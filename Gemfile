@@ -12,6 +12,7 @@ gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 gem 'ZenTest'
 gem 'autotest-rails-pure'
 gem 'growl', '1.0.3'
+gem 'showoff-io'
 
 group :development do
 	gem 'rspec-rails', '2.5.0'

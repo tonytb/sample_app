@@ -20,6 +20,11 @@ class User < ActiveRecord::Base
   has_many :reverse_relationships, :foreign_key => "followed_id", :class_name => "Relationship", :dependent => :destroy
   has_many :followers, :through => :reverse_relationships, :source => :follower
   
+  has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
+  belongs_to :invitation
+  
+  before_create :set_invitation_limit
+  
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
   validates :name, :presence => true, :length => { :maximum => 50 }
@@ -66,6 +71,10 @@ class User < ActiveRecord::Base
   
   
   private
+  
+  def set_invitation_limit
+    self.invitation_limit = 5
+  end
   
     def encrypt_password
       self.salt = make_salt if new_record?

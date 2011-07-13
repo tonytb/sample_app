@@ -1,0 +1,57 @@
+<%= form_for(@reseller) do |f| %>
+  <% if @reseller.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reseller.errors.count, "error") %> prohibited this reseller from being saved:</h2>
+
+      <ul>
+      <% @reseller.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="contentcontainer med left">
+   <div class="headings altheading">
+       <h2>Add a Reseller</h2>
+   </div>
+   <div class="contentbox">
+
+
+   		<p>
+               <label for="textfield"><strong>First Name:</strong></label>
+               <%= f.text_field :first_name %> <br />
+           </p>
+           <p>
+               <label for="textfield"><strong>Last Name:</strong></label>
+               <%= f.text_field :last_name %> <br />
+           </p>
+           <p>
+               <label for="textfield"><strong>Email Address:</strong></label>
+				<%= f.text_field :email %><br />
+           </p>
+		  <p>
+               <label for="textfield"><strong>Company Name:</strong></label>
+				<%= f.text_field :company_name %><br />
+               <!-- <span class="smltxt">(example: Dublin)</span> -->
+           </p>
+           <p>
+               <label for="textfield"><strong>Territory:</strong></label>
+			   <%= f.text_field :terriorty %><br />
+           </p>
+           <p>
+               <label for="textfield"><strong>Address:</strong></label>
+			   <%= f.text_field :address %>
+           </p>
+		   <p>
+               <label for="textfield"><strong>Notes:</strong></label>
+			   <%= f.text_field :notes %>
+           </p>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

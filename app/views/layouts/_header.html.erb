@@ -3,7 +3,7 @@
 <body id="home">
 		<div class="header">
 			<div class="container">
-				<h1><%= link_to "the rent book", root_path %></h1>
+				<h1><%= link_to "Sales-Promotions.com", root_path %></h1>
 				<div id="login">
 						<% if signed_in? %>
 							<%= link_to "Sign out", signout_path, :method => :delete %>
@@ -15,7 +15,7 @@
 				<div id="nav">
 					<ul>
 						<li class="first current"><%= link_to "Home", root_path %></li>
-						<li><%= link_to "Tour", '#' %></li>
+						<li><%= link_to "Tour", tour_path %></li>
 						<li><%= link_to "About us", about_path %></li>
 						<li><%= link_to "Contact us", contact_path %></li>
 					</ul>

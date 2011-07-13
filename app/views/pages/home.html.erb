@@ -2,7 +2,7 @@
 <table class="front" summary="for signed in users">
 	<tr>
 		<td class="main">
-			<h1 class="micropost">What's up motha-fucker!?</h1>
+			<h1 class="micropost">New message?</h1>
 			<%= render 'shared/micropost_form' %>
 			<%= render 'shared/feed' %>
 			<%= render 'shared/user_info' %>
@@ -22,17 +22,17 @@
 		<div class="container">
 			<div class="span-12 col1">
 				<div id="tagline">
-					<h2>Renting made easy.</h2>
-					<p>Landlords &amp; letting agents, track, monitor &amp; interact with your rental portfolio.</p>
+					<h2>Reseller Management.</h2>
+					<p>Track, monitor &amp; interact with your resellers.</p>
 				</div>
 				
 				<!-- ******************************* START OF TAB HEADERS ************************** -->
 				<div id="tabs">
 					<ul>
-						<li><a href="#tabs-1"><span>landlords</span></a></li>
-						<li><a href="#tabs-2"><span>tenants</span></a></li>
-						<li><a href="#tabs-3"><span>commerical</span></a></li>
-						<li class="green-tab"><a href="#tabs-4"><span>try it for free<span></a></li>
+						<li><a href="#tabs-1"><span>Clients</span></a></li>
+						<li><a href="#tabs-2"><span>Resellers</span></a></li>
+						<!-- <li><a href="#tabs-3"><span>Partners</span></a></li> -->
+						<li class="green-tab"><a href="#tabs-4"><span>Free Trial<span></a></li>
 					</ul>
 					
 				<!-- ******************************* END OF TAB HEADERS ************************** -->
@@ -41,34 +41,34 @@
 					
 					<div id="tabs-1" class="features-block content">
 						<ul class="feature-list">
-							<li><%= image_tag("41_48x48.png") %>
+							<li><%= image_tag("57_48x48.png") %>
 								<h4>Scalable Architecture</h4>
-								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+								<p>It's your platform so it grows with you, no more no less than you need.</p>
 							</li>
 							
 							<li class="last"><%= image_tag("02_48x48.png") %>
-								<h4>Expense Tracking</h4>
-								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+								<h4>Sales Tracking</h4>
+								<p>Your resellers can upload (or import) sales figures for greater transpatency.</p>
 							</li>
 							
 							<li><%= image_tag("25_48x48.png") %>
 								<h4>Skinnable Interface</h4>
-								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+								<p>Don't like our colours? No problem, we can white label to suite your corporate identity.</p>
 							</li>
 							
-							<li class="last"><%= image_tag("55_48x48.png") %>
+							<li class="last"><%= image_tag("20_48x48.png") %>
 								<h4>Real-Time Statistics</h4>
-								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+								<p>View sales, training, marketing statistics &amp; much more.</p>
 							</li>
 							
 							<li><%= image_tag("53_48x48.png") %>
 								<h4>Address Book</h4>
-								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+								<p>All your resellers in one place. Send mass mails, instant messages or contact individually.</p>
 							</li>
 							
 							<li class="last"><%= image_tag("18_48x48.png") %>
 								<h4>Custom Widgets</h4>
-								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
+								<p>Something missing? Let us know and perhaps we can add it to our development pipline.</p>
 							</li>
 						</ul>
 					</div>
@@ -79,22 +79,22 @@
 
 					<div id="tabs-2" class="content">
 						<ul class="feature-list clearfix">
-							<li><%= image_tag("16_48x48.png") %>
-								<h4>Value Plan</h4>
+							<li><%= image_tag("06_48x48.png") %>
+								<h4>Increase Sales</h4>
 								<p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.<br />
 									<%= link_to "learn more...", '#', :title => "Value Plan" %>
 								</p>
 							</li>
 							
-							<li class="last"><%= image_tag("04_48x48.png") %>
-								<h4>Medium Plan</h4>
+							<li class="last"><%= image_tag("10_48x48.png") %>
+								<h4>All your marketing material behind one door.</h4>
 								<p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.<br />
 									<%= link_to "learn more...", '#' %>
 								</p>
 							</li>
 							
-							<li><%= image_tag("23_48x48.png") %>
-								<h4>Premium Plan</h4>
+							<li><%= image_tag("21_48x48.png") %>
+								<h4>Stay Relevant</h4>
 								<p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.<br />
 									<%= link_to "learn more...", '#' %>
 								</p>
@@ -106,7 +106,7 @@
 					
 					<!-- ******************************* START OF TAB 3 ************************** -->
 
-					<div id="tabs-3" class="content">
+					<!-- <div id="tabs-3" class="content">
 						<ul class="feature-list clearfix">
 							<li class="no-icon">
 								<h4><%= link_to "Support Wiki", '#' %></h4>
@@ -126,7 +126,7 @@
 								<p>Donec nec justo eget felis facilisis fermentum sit amet orci.</p>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 					
 					<!-- ******************************* END OF TAB 3 ************************** -->
 					
@@ -164,7 +164,7 @@
 			
 			<!-- ******************************* END OF SLIDER ************************** -->
 			
-			<center><div id="cta" class="clearfix button-row"><span><%= link_to "take the tour", '#' %> <%= link_to "sign up for free", signup_path %></span></div></center>
+			<center><div id="cta" class="clearfix button-row"><span><%= link_to "Take the tour", '#' %> <%= link_to "Free trial", signup_path %></span></div></center>
 
 			
 			<!-- ******************************* START OF TESTIMONIALS ************************** -->
@@ -172,9 +172,9 @@
 				<div id="testimonials">
 					<div class="testimonial">
 						<div class="inner">
-							<cite>This is starting to come together!</cite>
+							<cite>Grazie, efficaci e professionali come sempre. Ragion per cui scelgo sempre Epson</cite>
 						</div>
-							<h6>Joe Doe, Lorem Labs</h6>
+							<h6>Epson customer</h6>
 					</div>
 				</div>
 				

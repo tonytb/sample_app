@@ -1,8 +1,8 @@
 <div id="leftside">
 	<div class="user">
-    	<%= gravatar_for @user %>
+    	
 		<br />
-        <p>Logged in as:</p>
+        <p>Welcome</p>
         <p class="username"><%= @user.name %></p>
 		<!-- <p>URL: <%= link_to user_path(@user), @user %></p> -->
 		<br />
@@ -12,57 +12,49 @@
 		<p class="userbtn"><%= link_to "Home", current_user %></p>
     </div>
 
-	<div class="notifications">
-		<% @user ||= current_user %>
-		<table>
-			<tr>
-			<td>
-				<p><a href="<%= following_user_path(@user) %>" title="" class="notifypop">Tracking:</a></p>
-		  
-		<p class="notifycount"><a href="<%= following_user_path(@user) %>" title="" class="notifypop"><%= @user.following.count %></a></p>
-				<p>Tenants</p>
-			</td>
-			<td></td>
-		
-		<td><p><a href="<%= followers_user_path(@user) %>" title="" class="notifypop">Tracked by:</a></p>
-		  
-		<p class="notifycount"><a href="<%= followers_user_path(@user) %>" title="" class="notifypop"><%= @user.followers.count %></a></p>
-				<p>Tenants</p>
-		</td>
-		</tr>
-		</table>
-		
-	    </div>
+	 <div class="notifications">
+        	<p class="notifycount"><a href="" title="" class="notifypop">257</a></p>
+            <p><a href="" title="" class="notifypop">Points available to spend</a></p>
+            <!-- <p class="smltxt">(Click to view)</p> -->
+        </div>
     
     <ul id="nav">
     	<li>
-				<a class="collapsed heading">Manage Properties</a>
+				<a class="collapsed heading">Your Account</a>
 				<ul class="navigation">
-				<li><%= link_to 'All Properties', '#' %></li>
-                <li><%= link_to 'New Property', '#' %></li>
-                <li><a href="#" title="">Section link here</a></li>
+				<li><%= link_to 'View Rewards', rewards_path %></a></li>
+                <li><a href="#" title="">About Cisco Rewards</a></li>
+				<li><a href="http://localhost:3000/claimform" title="">Claim Form</a></li>
+                <li><a href="#" title="">Qualifying Products &amp; Points</a></li>
+				<li><a href="#" title="">My Account</a></li>
+            </ul>
+        </li>
+		<li>
+				<a class="collapsed heading">Manage Products</a>
+				<ul class="navigation">
+				<li><%= link_to 'All Products', products_path %></li>
+                <li><%= link_to 'Add a Product', new_product_path %></li>
+				<li><a href="#" title="">Bulk Add Products</a></li>
             </ul>
         </li>
         <li>
-            <a class="collapsed heading">Manage Tenants</a>
+            <a class="collapsed heading">Manage Marketing</a>
              <ul class="navigation">
-                <li><%= link_to 'All Tenants', '#' %></li>
-                <li><%= link_to 'New Tenant', '#' %></li>
-                <li><a href="#" title="">Invite tenant</a></li>
+                <li><%= link_to 'Download Documents', '#' %></li>
+                <li><%= link_to 'Download Packs', '#' %></li>
+                <!-- <li><%= link_to '', '#' %></li> -->
             </ul>
         </li>
-        <li><a class="expanded heading">Manage Payments</a>
+        <li><a class="expanded heading">E-Learning</a>
             <ul class="navigation">
-                <li><a href="#" title="" class="likelogin">Section link here</a></li>
-                <li><a href="#" title="">Section link here</a></li>
-                <li><a href="#" title="">Section link here</a></li>
+                <li><a href="#" title="" class="likelogin">Training Videos</a></li>
+                <li><a href="#" title="">Product Manuals</a></li>
+                <!-- <li><a href="#" title="">Section link here</a></li> -->
             </ul>
         </li>
-        <li><a class="expanded heading">Coming Soon...</a>
+        <li><a class="expanded heading">Reports</a>
             <ul class="navigation">
-                <li><a href="#" title="" class="likelogin">Section link here</a></li>
-                <li><a href="#" title="">Section link here</a></li>
-                <li><a href="#" title="">Section link here</a></li>
+                <li><%= link_to 'All Reports', reports_path %></li>
             </ul>
         </li>
     </ul>

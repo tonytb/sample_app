@@ -19,6 +19,10 @@ class PagesController < ApplicationController
   def help
 	@title = "Help"
   end
+  
+  def tour
+    @title = "Tour"
+  end
 
 
 end

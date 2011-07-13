@@ -1,0 +1,1 @@
+<!-- <%= render :partial => "product_list", :locals => { :products => Product.all } %> -->

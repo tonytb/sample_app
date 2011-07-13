@@ -1,0 +1,56 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+<div class="contentcontainer med left">
+   <div class="headings altheading">
+       <h2>New Product</h2>
+   </div>
+   <div class="contentbox">
+
+
+   		<p>
+               <label for="textfield"><strong>Product Name:</strong></label>
+               <%= f.text_field :product_name %> <br />
+               <span class="smltxt">(for a list of products click here)</span>
+           </p>
+           <p>
+               <label for="textfield"><strong>Model:</strong></label>
+               <%= f.text_field :model %> <br />
+           </p>
+           <p>
+               <label for="textfield"><strong>Product Description:</strong></label>
+				<%= f.text_field :description %><br />
+           </p>
+		  <p>
+               <label for="textfield"><strong>Available software:</strong></label>
+				<%= f.text_field :software %><br />
+               <!-- <span class="smltxt">(example: Dublin)</span> -->
+           </p>
+           <p>
+               <label for="textfield"><strong>Product Literature:</strong></label>
+			   <%= f.text_field :product_literature %><br />
+           </p>
+           <p>
+               <label for="textfield"><strong>Price:</strong></label>
+			   <%= number_to_currency (f.text_field :price) %>
+           </p>
+		  
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+

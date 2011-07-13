@@ -1,0 +1,57 @@
+<!-- Alternative Content Box Start -->
+    <div class="contentcontainer">
+       <div class="headings altheading">
+           <h2>Listing Products</h2>
+       </div>
+       <div class="contentbox">
+       	<table width="100%">
+           	<thead>
+               	<tr>
+                   	   <th>Product Name</th>
+                       <th>Model</th>
+					   <th>Description</th>
+					   <th>Software</th>
+					   <th>Product literature</th>
+					   <th>Price</th>
+					   <th></th>
+                       
+					   
+                   </tr>
+               </thead>
+               <tbody>
+						
+					<% @products.each do |product| %>
+               	<tr>
+                   	  <td><%= product.product_name %></td>
+                       <td><%= product.model %></td>
+					   <td><%= product.description %></td>
+					   <td><%= product.software %></td>
+					   <td><%= product.product_literature %></td>
+					   <td><%= product.price %></td>
+					   
+                       <td>
+					    <%= link_to image_tag("cp/icons/icon_approve.png"), product %> &nbsp;&nbsp;&nbsp;&nbsp;
+                       
+                       </td>
+                       
+                   </tr>
+					<% end %>
+					
+                   
+                   
+                    
+               </tbody>
+           </table>
+           <div class="extrabottom">
+           	<ul>
+				<li><%= image_tag("cp/icons/icon_approve.png") %> Show</li>
+               	<li><%= image_tag("cp/icons/icon_edit.png") %> Edit</li>
+                <li><%= image_tag("cp/icons/icon_delete.png") %> Remove</li>
+               </ul>
+           </div>
+       </div>
+   </div>
+  <!-- Alternative Content Box End -->
+
+
+<!-- <%= link_to 'New Product', new_product_path %> -->

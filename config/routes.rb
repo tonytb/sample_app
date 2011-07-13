@@ -1,4 +1,16 @@
 SampleApp::Application.routes.draw do
+  resources :rewards
+
+  resources :accounts
+
+  resources :reports
+
+  resources :products
+
+  resources :resellers
+
+  resources :invitations
+
   # get "sessions/new"
 
   resources :users do
@@ -17,8 +29,11 @@ SampleApp::Application.routes.draw do
 
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
+  match '/tour',    :to => 'pages#tour'
   match '/help',    :to => 'pages#help'
   match '/signup',  :to => 'users#new'
+  match '/claimform', :to => 'rewards#claimform'
+  match 'treasurehunt', :to => 'rewards#treasurehunt'
   
   root :to => 'pages#home'
 

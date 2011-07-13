@@ -30,6 +30,7 @@ class UsersController < ApplicationController
     @micropost = current_user.microposts.build(params[:micropost])
     @feed_items = current_user.feed.paginate(:page => params[:page] || 1, :per_page => 3)
     @title = @user.name
+    #@resellers = reseller
   end
   
   def new

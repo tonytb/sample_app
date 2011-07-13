@@ -1,0 +1,50 @@
+<!-- Alternative Content Box Start -->
+    <div class="contentcontainer">
+       <div class="headings altheading">
+           <h2>Current Resellers</h2>
+       </div>
+       <div class="contentbox">
+       	<table width="100%">
+           	<thead>
+               	<tr>
+                   	   <th>First Name</th>
+                       <th>Last Name</th>
+					   <th>Company Name</th>
+					   <th>Territory</th>
+					   <th>Address</th>
+                       
+					   
+                   </tr>
+               </thead>
+               <tbody>
+						
+					<% @resellers.each do |reseller| %>
+               	<tr>
+                   	<td><%= reseller.first_name %> <%= reseller.last_name %></td>
+                       <td><%= reseller.company_name %></td>
+					   <td><%= reseller.terriorty %></td>
+					   <td><%= reseller.address %></td>
+                       <td>
+					    <%= link_to image_tag("cp/icons/icon_approve.png"), reseller %> &nbsp;&nbsp;&nbsp;&nbsp;
+                       	<%= link_to image_tag("cp/icons/icon_edit.png"), edit_reseller_path(reseller) %>
+						<%= button_to "Remove", reseller, :method => :delete, :class => :destroy, :confirm => 'Are you sure?' %>
+                       </td>
+                       
+                   </tr>
+					<% end %>
+					
+                   
+                   
+                    
+               </tbody>
+           </table>
+           <div class="extrabottom">
+           	<ul>
+				<li><%= image_tag("cp/icons/icon_approve.png") %> Show</li>
+               	<li><%= image_tag("cp/icons/icon_edit.png") %> Edit</li>
+                <li><%= image_tag("cp/icons/icon_delete.png") %> Remove</li>
+               </ul>
+           </div>
+       </div>
+   </div>
+  <!-- Alternative Content Box End -->
